@@ -27,19 +27,22 @@ export default function Home() {
 
   const runApp = () => {
     const idToken = liff.getIDToken();
-    setIdToken(idToken); // Update idToken state
+    setIdToken(idToken);
 
     liff
       .getProfile()
       .then((profile) => {
-        console.log(profile);
-        // Update state with profile information
         setDisplayName(profile.displayName);
         setPictureUrl(profile.pictureUrl);
         setStatusMessage(profile.statusMessage);
         setUserId(profile.userId);
       })
       .catch((err) => console.error(err));
+  };
+
+  const logout = () => {
+    liff.logout();
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -71,7 +74,7 @@ export default function Home() {
           <p style={{ textAlign: "left", marginLeft: "20%" }}>
             <b>user id: </b> {userId}
           </p>
-          <button onClick={() => new logout()}>Logout</button>
+          <button onClick={() => logout()}>Logout</button>
         </div>
       </div>
     </main>
