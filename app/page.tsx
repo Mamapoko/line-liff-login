@@ -13,7 +13,7 @@ export default function Home() {
 
   const initLine = () => {
     liff.init(
-      { liffId: "2006372499-80lM51Ay" },
+      { liffId: "2005966035-b9zm7eNm" },
       () => {
         if (liff.isLoggedIn()) {
           runApp();
