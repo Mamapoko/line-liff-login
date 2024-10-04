@@ -50,12 +50,12 @@ export default function Home() {
       <div className="bg-gray-100 px-5 py-12 md:w-96 rounded-2xl shadow-lg">
         <div className="px-8">
           <h1>Line</h1>
-          {/* <Image
-            src={pictureUrl}
+          <Image
+            src={pictureUrl || "/placeholder.png"}
             alt="Description of the image"
             width={300}
             height={300}
-          /> */}
+          />
           <p style={{ textAlign: "left", marginLeft: "20%" }}>
             <b>id token: </b> {idToken}
           </p>
