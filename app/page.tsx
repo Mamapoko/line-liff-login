@@ -1,3 +1,4 @@
+"use client";
 import liff from "@line/liff";
 import logout from "@line/liff/logout";
 import Image from "next/image";
